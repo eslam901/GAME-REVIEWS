@@ -1,0 +1,121 @@
+body {
+  background-color: #272B30;
+}
+
+.loading {
+  position: fixed;
+  z-index: 9999999;
+  inset: 0;
+  background-color: #272b30e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loader {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: 4px solid white;
+    border-right: 4px solid transparent;
+    animation: rotate 1s linear infinite;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border-left: 4px solid #ff3d00;
+      border-bottom: 4px solid transparent;
+      animation: rotate 0.5s linear infinite reverse;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------- */
+
+header img {
+  object-fit: cover;
+  max-height: 30vh;
+}
+
+.navbar {
+  width: 75%;
+  margin: auto;
+  border-radius: 25px;
+  top: 30px;
+  background-color: #3A497B;
+  color: white;
+  transform: translatey(-50%);
+}
+
+.nav-link {
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.5s;
+}
+
+.nav-link:hover {
+  color: #09c;
+}
+
+.active {
+  color: #09c !important;
+}
+
+.card {
+  background-color: inherit;
+  filter: grayscale(0.7);
+  transition: transform 0.5s, filter 0.5s 0.1s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+
+.badge {
+  background-color: #32383e;
+}
+
+#details {
+  background-color: #32353A;
+  min-height: 100vh;
+
+  .btnClose {
+    cursor: pointer;
+    color: white;
+
+  }
+
+  .text-details {
+    font-size: 12px;
+  }
+
+  .col-md-8 span {
+    background-color: #0dcaf0;
+    padding: 5px;
+    border-radius: 10px;
+    color: black;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
