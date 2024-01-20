@@ -24,6 +24,7 @@ export class Details {
       const result = await response.json();
       console.log(result);
       this.ui.showDetails(result);
+      document.getElementById("details").classList.remove("d-none");
       document.querySelector(".loading").classList.add("d-none");
     } catch (error) {
       console.error(error);

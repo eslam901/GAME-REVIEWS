@@ -45,6 +45,5 @@ export class Game {
   handelDetailes(id) {
     const details = new Details(id);
     document.getElementById("games").classList.add("d-none");
-    document.getElementById("details").classList.remove("d-none");
   }
 }
